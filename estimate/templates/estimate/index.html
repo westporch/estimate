@@ -1,11 +1,11 @@
-test12
+Test
 
 {% if product_list %}
-    {% for product in product_list %}
     <select name="test">
+        {% for product in product_list %}
        <option value=""> {{ product.item_name }} </option>
+        {% endfor %}
     </select>
-    {% endfor %}
 
 {% else %}
     <p>Not found</p>
