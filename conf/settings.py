@@ -118,4 +118,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
+# <STATIC_URL 사용법>
+# 1. 각 app 디렉토리 밑에 /static이란 디렉토리 생성한다.
+# 2. static 파일들을 사용하려면 템플릿 파일에 {% load staticfiles %}를 추가한다.
 STATIC_URL = '/static/'
