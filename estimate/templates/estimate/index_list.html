@@ -1,0 +1,13 @@
+Test
+
+{% if product_list %}
+    <select name="test">
+        {% for product in product_list %}
+       <option value=""> {{ product.item_name }} </option>
+        {% endfor %}
+    </select>
+
+{% else %}
+    <p>Not found</p>
+
+{% endif %}
