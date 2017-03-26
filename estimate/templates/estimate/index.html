@@ -6,8 +6,8 @@
     <tbody>
         <tr>
             <th>제품명</th>
-            <th>수량</th>
-            <th>금액</th>
+            <th>수량(개)</th>
+            <th>금액(원)</th>
         </tr>
         <tr>
             <!-- 상품 목록을 콤보박스로 출력함 -->
@@ -27,12 +27,15 @@
 
             <!-- 수량을 선택하는 콤보박스 -->
             <td>
-                <select name="item_quantity">
-                    <option value="1개">1개</option>
-                    <option value="2개">2개</option>
-                    <option value="3개">3개</option>
-                    <option value="4개">4개</option>
-                    <option value="5개">5개</option>
+                <form action="PageObjects" method="get"> 
+                <select name="item_quantity" id="selection">
+                    <option value="">선택</option>
+                    <option value="1" onClick="window.location.reload()">1개</option>
+                    <option value="2" onClick="window.location.reload()">2개</option>
+                    <option value="3" onClick="window.location.reload()">3개</option>
+                    <option value="4" onClick="window.location.reload()">4개</option>
+                    <option value="5" onClick="window.location.reload()">5개</option>
+                </form>
             </td>
             
             <!-- 상품의 가격을 출력하는 부분 -->
@@ -40,7 +43,15 @@
 
             <td>
             <!-- {{ test_price }} -->
-            {{ get_price }}
+            <!-- {{ get_price }} -->
+            <!--     {% widthratio get_price 1 3 %} -->
+            
+            <script language="javascript">
+            var target = document.getElementById("selection");
+            var val = target.options[target.selectedIndex].value
+            document.write(val * 400000);
+            </script>
+            
             </td>
             <!-- 상품 가격 출력 테스트 끝-->
 

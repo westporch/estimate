@@ -16,6 +16,10 @@ def index(request):
     uvdi_dict = list(Product.objects.filter(item_name='U+VDI').values('unit_price'))[0]
 
     #context = {'product_list': product_list, 'test_price': price, 'get_price': Product.objects.filter(item_name='U+VDI').values('unit_price')}
+
     context = {'product_list': product_list, 'test_price': price, 'get_price': uvdi_dict['unit_price']}
 
+    
+
     return render(request, 'estimate/index.html', context)
+
