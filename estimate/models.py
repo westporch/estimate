@@ -6,7 +6,8 @@ class Product(models.Model):
 
     def __str__(self):
         return self.item_name
-    
+ 
+   
 class Receiver(models.Model):
     receiver_name = models.CharField(max_length=20)
     receiver_company = models.CharField(max_length=20)

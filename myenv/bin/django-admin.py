@@ -1,4 +1,4 @@
-#!/home/westporch/Git/estimate/myenv/bin/python3.4
+#!/root/git/estimate/myenv/bin/python3.4
 from django.core import management
 
 if __name__ == "__main__":
